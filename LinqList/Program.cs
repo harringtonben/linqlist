@@ -31,6 +31,22 @@ namespace LinqList
                 Console.WriteLine(multiple);
             }
 
+            List<string> names = new List<string>()
+            {
+                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+                "Francisco", "Tre"
+            };
+
+            var orderedNames = names.OrderByDescending(name => name);
+
+            foreach (var name in orderedNames)
+            {
+                Console.WriteLine(name);
+            }
+
             Console.Read();
         }
     }

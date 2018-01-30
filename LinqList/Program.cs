@@ -93,6 +93,25 @@ namespace LinqList
 
             Console.WriteLine(priceMax);
 
+            /*
+                Store each number in the following List until a perfect square
+                is detected.
+
+                Ref: https://msdn.microsoft.com/en-us/library/system.math.sqrt(v=vs.110).aspx
+            */
+            List<int> wheresSquaredo = new List<int>()
+            {
+                66, 12, 8, 27, 82, 34, 7, 50, 19, 46, 81, 23, 30, 4, 68, 14
+            };
+
+            
+            var perfectSquares = wheresSquaredo.Where(number => Math.Sqrt(number) % 1 == 0);
+
+            foreach (var number in perfectSquares)
+            {
+                Console.WriteLine(number);
+            }
+
             Console.Read();
         }
     }
